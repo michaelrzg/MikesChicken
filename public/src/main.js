@@ -4,7 +4,6 @@ import { OrbitControls } from "../../node_modules/three/examples/jsm/controls/Or
 import { InteractionManager } from "../../node_modules/three.interactive/build/three.interactive.js";
 import * as TWEEN from "../../node_modules/@tweenjs/tween.js/dist/tween.esm.js";
 import * as REACT from "../../node_modules/react/umd/react.development.js";
-
 //Renderer does the job of rendering the graphics
 let renderer = new THREE.WebGLRenderer({
   //Defines the canvas component in the DOM that will be used
@@ -523,3 +522,5 @@ function toggleRevealed(){
   }
 }
 }
+var controller = new Controller();
+controller.bigScreenTransition()
