@@ -1,9 +1,9 @@
 import * as THREE from "three";
 import { LoadGLTFByPath } from "./Helpers/ModelHelper.js";
-import { OrbitControls } from "../../node_modules/three/examples/jsm/controls/OrbitControls.js";
-import { InteractionManager } from "../../node_modules/three.interactive/build/three.interactive.js";
-import * as TWEEN from "../../node_modules/@tweenjs/tween.js/dist/tween.esm.js";
-import * as REACT from "../../node_modules/react/umd/react.development.js";
+import { OrbitControls } from "/node_modules/three/examples/jsm/controls/OrbitControls.js";
+import { InteractionManager } from "/node_modules/three.interactive/build/three.interactive.js";
+import * as TWEEN from "/node_modules/@tweenjs/tween.js/dist/tween.esm.js";
+import * as REACT from "/node_modules/react/umd/react.development.js";
 //Renderer does the job of rendering the graphics
 let renderer = new THREE.WebGLRenderer({
   //Defines the canvas component in the DOM that will be used
@@ -122,13 +122,13 @@ let sign = createRect({ color: 0x0065d9, x: -3, y: 1, z: -2.85 });
 sign.rotateY(90);
 sign.visible = false;
 scene.add(sign);
-const signPosition = new THREE.Vector3(-1.88, 1, -3.89);
+const signPosition = new THREE.Vector3(-1.88, 1.1, -3.89);
 
 //create vendin machine geometry
 let vending = createRect({ color: 0x0065d9, x: -4.4, y: 1.3, z: 2.9 });
 vending.visible = false;
 scene.add(vending);
-const vendingPosition = new THREE.Vector3(-4.078, 1.697, 4.73);
+const vendingPosition = new THREE.Vector3(-4.078, 2, 5.5);
 
 let newsStand = createRect({ color: 0x0065d9, x: -9.8, y: 1.2, z: .5 })
 newsStand.visible = false;
@@ -138,9 +138,6 @@ const newsStandPosition = new THREE.Vector3(-10.85,-1,.75)
 let businessCard = createCard({ color: 0x0065d9, x: -2.9, y: 1.1, z: -6 })
 businessCard.visible = false;
 scene.add(businessCard)
-function clickedme() {
-  console.log("CLICKED");
-}
 const businessCardPosition = new THREE.Vector3(-2.5,2.46,-5.72)
 // const [cameraPosition, setCameraPosition] = REACT.useState(
 //   new THREE.Vector3(camera.position.x,camera.position.y,camera.position.z)
